@@ -1,0 +1,46 @@
+
+.main{
+    display:flex;
+}
+
+
+.grid-3{
+    grid-template-columns: auto auto auto; 
+    /*Each AUTO is a saved spot for a coloum 
+    Now I have 3 coloums*/
+}
+.grid-2 {
+    grid-template-columns: auto auto ; 
+    /*Each AUTO is a saved spot for a coloum 
+    Now I have 2 coloums*/
+}
+.container{
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20%;
+    background-color: #2196F3;
+    padding: 10%;
+    margin: 5%;
+    /* Center the grid horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+}
+.container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+   
+    max-width: 300px;
+    max-height: 300px;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  
+}
+.container > div > img {
+    border-radius: 60px;
+    height: 90%;
+    width: 90%;
+    
+}
+
+
+
