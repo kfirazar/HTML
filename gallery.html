@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-3 container">
+       
+        
+    </div>
+    <div class="container grid-2">
+        <div class="pic_div">
+            <img class="img" src="Images\1.jpeg" alt="">
+        </div>
+        <div class="pic_div">
+            <img class="img" src="Images\2.jpeg" alt="">
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function uploadImages(array) {
+        for(var i=1;i<=array.length;i++){
+            
+
+            let img = document.createElement('img');
+            img.src = "Images/"+(i)+".jpeg";
+            img.classList = "img";
+            
+
+            const container = document.querySelector('.grid-3.container');    
+            let a = document.createElement('a');
+            a.classList.add("pic_div");
+            a.href="picture.html?id="+i;
+
+            a.appendChild(img);
+            container.appendChild(a);
+            
+        }
+    }
+     
+
+    uploadImages(["","",""])
+</script>

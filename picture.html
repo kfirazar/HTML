@@ -9,39 +9,55 @@
 <body>
     <div class="main">
         <div class="title">
-            <title>Nigga</title>
+           <h1>Nigga</h1>
         </div>
-        <div class="panel">
-            <img src="Images\1.jpeg" alt="G">
-        </div>
-        <div class="treebar">
-                <div>
-                    <img src="Images\2.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\3.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\2.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\3.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\2.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\3.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\2.jpeg" alt="G">
-                </div>
-                <div>
-                    <img src="Images\3.jpeg" alt="G">
-                </div>
-                
+        <div class="gallery">
+            <div class="panel">
+                <img src="" alt="G">
+            </div>
+            <div class="treebar">
+                    <div>
+                        <img src="Images\2.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\3.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\2.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\3.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\2.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\3.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\2.jpeg" alt="G">
+                    </div>
+                    <div>
+                        <img src="Images\3.jpeg" alt="G">
+                    </div>
+                    
+            </div>
         </div>
     </div>
 
 </body>
 </html>
+
+<script>
+    function getUrlPar(){
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        let id = params.get('id');
+        console.log(id);
+        if(id === null)
+            id = 1;
+        let img = document.querySelector('.panel img');
+        img.src = "Images/"+id+".jpeg";
+    }
+    getUrlPar()
+</script>

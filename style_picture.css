@@ -2,11 +2,17 @@
 .main{
     display:flex;
     padding: 1%;
-    
+    flex-direction: column;
    
 }
 
 
+.gallery{
+    display: flex;
+}
+.title{
+    background-color:greenyellow;
+}
 
 .panel {
     width: 80%;
